@@ -17,7 +17,7 @@ let csrfToken = null;
 
 const getCsrfToken = async () => {
     try {
-        const response = await fetch('/csrf-token', { credentials: "include" });
+        const response = await fetch('csrf-token.json', { credentials: "include" });
         const data = await response.json();
         return data.csrfToken;
     } catch (error) {
